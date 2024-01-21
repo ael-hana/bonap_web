@@ -1752,3 +1752,15 @@
   font-family: cormfortaa;
   src: url(../font/Comfortaa-VariableFont_wght.ttf);
 }
+
+.svg-selected path {
+  fill: #ff6022 !important;
+}
+.svg-green path {
+  fill: #008A23;
+  cursor: pointer;
+}
+
+.svg-green {
+  cursor: pointer;
+}
