@@ -1748,4 +1748,7 @@
   }
 }
 
-
+@font-face {
+  font-family: cormfortaa;
+  src: url(../font/Comfortaa-VariableFont_wght.ttf);
+}
