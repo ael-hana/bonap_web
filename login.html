@@ -18,7 +18,7 @@
 </head>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-      var urlLogin = true ?"http://localhost:3000/restaurants/login" :"https://bonap-api-d2a214f734f0.herokuapp.com/restaurants/login"
+      var urlLogin = window.location.href.includes("localhost") ?"http://localhost:3000/restaurants/login" :"https://bonap-api-d2a214f734f0.herokuapp.com/restaurants/login"
     var formulaire = document.getElementById("login-form");
 
     formulaire.addEventListener("submit", function(e) {
@@ -30,14 +30,11 @@
         login, password
       })
 
-      console.log(urlLogin, body)
-
       fetch(urlLogin, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        withCredntials: true,
         cache:"no-cache",
         credentials: 'include',
         body
@@ -46,6 +43,7 @@
         if (!response.ok) {
           throw new Error("La requête a échoué.");
         }
+        window.location.href = '/';
       })
       .catch(function(error) {
         console.error(error);
