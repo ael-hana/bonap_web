@@ -25,11 +25,191 @@
     <h1>Create a Promotion</h1>
     <div class="w-form">
       <form id="wf-form-Promotion-Form" name="wf-form-Promotion-Form" data-name="Promotion Form" method="get" data-wf-page-id="65252c253b18f3ca1ef537f8" data-wf-element-id="493d3bbf-58ea-55ae-f384-9415bbe8c80e">
-        <label for="field-2">PickUp the date</label><input type="text" class="w-input" maxlength="256" name="field" data-name="" placeholder="2023-10-10" id="field-2"><label for="field">Select the Time-Slot for the Promotion</label>
-        <div class="div-block-3">
-          <div><label class="w-checkbox"><input type="checkbox" id="checkbox-6" name="checkbox-6" data-name="Checkbox 6" class="w-checkbox-input"><span class="w-form-label" for="checkbox-6">07:00 - 08:00</span></label><label class="w-checkbox"><input type="checkbox" id="checkbox-5" name="checkbox-5" data-name="Checkbox 5" class="w-checkbox-input"><span class="w-form-label" for="checkbox-5">08:00 - 09:00</span></label><label class="w-checkbox"><input type="checkbox" id="checkbox-7" name="checkbox-7" data-name="Checkbox 7" class="w-checkbox-input"><span class="w-form-label" for="checkbox-7">09:00 - 10:00</span></label><label class="w-checkbox"><input type="checkbox" id="checkbox-4" name="checkbox-4" data-name="Checkbox 4" class="w-checkbox-input"><span class="w-form-label" for="checkbox-4">10:00 - 11:00</span></label><label class="w-checkbox"><input type="checkbox" id="checkbox-3" name="checkbox-3" data-name="Checkbox 3" class="w-checkbox-input"><span class="w-form-label" for="checkbox-3">11:00 - 12:00</span></label><label class="w-checkbox"><input type="checkbox" id="checkbox-2" name="checkbox-2" data-name="Checkbox 2" class="w-checkbox-input"><span class="w-form-label" for="checkbox-2">12:00 - 13:00</span></label></div>
-          <div><label class="w-checkbox"><input type="checkbox" id="checkbox-6" name="checkbox-6" data-name="Checkbox 6" class="w-checkbox-input"><span class="w-form-label" for="checkbox-6">13:00 - 14:00</span></label><label class="w-checkbox"><input type="checkbox" id="checkbox-5" name="checkbox-5" data-name="Checkbox 5" class="w-checkbox-input"><span class="w-form-label" for="checkbox-5">14:00 - 15:00</span></label><label class="w-checkbox"><input type="checkbox" id="checkbox-7" name="checkbox-7" data-name="Checkbox 7" class="w-checkbox-input"><span class="w-form-label" for="checkbox-7">15:00 - 16:00</span></label><label class="w-checkbox"><input type="checkbox" id="checkbox-4" name="checkbox-4" data-name="Checkbox 4" class="w-checkbox-input"><span class="w-form-label" for="checkbox-4">16:00 - 17:00</span></label><label class="w-checkbox"><input type="checkbox" id="checkbox-3" name="checkbox-3" data-name="Checkbox 3" class="w-checkbox-input"><span class="w-form-label" for="checkbox-3">17:00 - 18:00</span></label><label class="w-checkbox"><input type="checkbox" id="checkbox-2" name="checkbox-2" data-name="Checkbox 2" class="w-checkbox-input"><span class="w-form-label" for="checkbox-2">18:00 - 19:00</span></label></div>
-          <div><label class="w-checkbox"><input type="checkbox" id="checkbox-6" name="checkbox-6" data-name="Checkbox 6" class="w-checkbox-input"><span class="w-form-label" for="checkbox-6">19:00 - 20:00</span></label><label class="w-checkbox"><input type="checkbox" id="checkbox-5" name="checkbox-5" data-name="Checkbox 5" class="w-checkbox-input"><span class="w-form-label" for="checkbox-5">20:00 - 21:00</span></label><label class="w-checkbox"><input type="checkbox" id="checkbox-7" name="checkbox-7" data-name="Checkbox 7" class="w-checkbox-input"><span class="w-form-label" for="checkbox-7">21:00 - 22:00</span></label><label class="w-checkbox"><input type="checkbox" id="checkbox-4" name="checkbox-4" data-name="Checkbox 4" class="w-checkbox-input"><span class="w-form-label" for="checkbox-4">22:00 - 23:00</span></label><label class="w-checkbox"><input type="checkbox" id="checkbox-3" name="checkbox-3" data-name="Checkbox 3" class="w-checkbox-input"><span class="w-form-label" for="checkbox-3">23:00 - 00:00</span></label><label class="w-checkbox"><input type="checkbox" id="checkbox-2" name="checkbox-2" data-name="Checkbox 2" class="w-checkbox-input"><span class="w-form-label" for="checkbox-2">00:00 - 07:00</span></label></div>
+        <label for="field-2">PickUp the date</label>
+        <!--
+        <input type="text" class="w-input" maxlength="256" name="field" data-name="" placeholder="2023-10-10" id="field-2">
+          -->
+          <input type="date" min="" max="" id="field-2" required>
+        <label for="field">Select the Time-Slot for the Promotion</label>
+        <div class="div-block-3" style="grid-template-columns: 1fr 1fr 1fr 1fr;">
+          <div>
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-6a" name="checkbox-6a" data-name="Checkbox 6a" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-6a">07:00 - 07:30</span>
+            </label>
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-6b" name="checkbox-6b" data-name="Checkbox 6b" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-6b">07:30 - 08:00</span>
+            </label>
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-5a" name="checkbox-5a" data-name="Checkbox 5a" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-5a">08:00 - 08:30</span>
+            </label>
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-5b" name="checkbox-5b" data-name="Checkbox 5b" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-5b">08:30 - 09:00</span>
+            </label>
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-7a" name="checkbox-7a" data-name="Checkbox 7a" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-7a">09:00 - 09:30</span>
+            </label>
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-7b" name="checkbox-7b" data-name="Checkbox 7b" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-7b">09:30 - 10:00</span>
+            </label>
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-10a" name="checkbox-10a" data-name="Checkbox 10a" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-10a">10:00 - 10:30</span>
+            </label>
+
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-10b" name="checkbox-10b" data-name="Checkbox 10b" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-10b">10:30 - 11:00</span>
+            </label>
+
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-11a" name="checkbox-11a" data-name="Checkbox 11a" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-11a">11:00 - 11:30</span>
+            </label>
+          </div>
+          <div>
+
+
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-11b" name="checkbox-11b" data-name="Checkbox 11b" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-11b">11:30 - 12:00</span>
+            </label>
+
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-12a" name="checkbox-12a" data-name="Checkbox 12a" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-12a">12:00 - 12:30</span>
+            </label>
+
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-12b" name="checkbox-12b" data-name="Checkbox 12b" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-12b">12:30 - 13:00</span>
+            </label>
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-13a" name="checkbox-13a" data-name="Checkbox 13a" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-13a">13:00 - 13:30</span>
+            </label>
+
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-13b" name="checkbox-13b" data-name="Checkbox 13b" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-13b">13:30 - 14:00</span>
+            </label>
+
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-14a" name="checkbox-14a" data-name="Checkbox 14a" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-14a">14:00 - 14:30</span>
+            </label>
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-14b" name="checkbox-14b" data-name="Checkbox 14b" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-14b">14:30 - 15:00</span>
+            </label>
+
+
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-15a" name="checkbox-15a" data-name="Checkbox 15a" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-15a">15:00 - 15:30</span>
+            </label>
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-15b" name="checkbox-15b" data-name="Checkbox 15b" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-15b">15:30 - 16:00</span>
+            </label>
+          </div>
+
+          <div>
+
+
+
+
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-16a" name="checkbox-16a" data-name="Checkbox 16a" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-16a">16:00 - 16:30</span>
+            </label>
+
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-16b" name="checkbox-16b" data-name="Checkbox 16b" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-16b">16:30 - 17:00</span>
+            </label>
+
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-17a" name="checkbox-17a" data-name="Checkbox 17a" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-17a">17:00 - 17:30</span>
+            </label>
+
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-17b" name="checkbox-17b" data-name="Checkbox 17b" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-17b">17:30 - 18:00</span>
+            </label>
+
+
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-18a" name="checkbox-18a" data-name="Checkbox 18a" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-18a">18:00 - 18:30</span>
+            </label>
+
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-18b" name="checkbox-18b" data-name="Checkbox 18b" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-18b">18:30 - 19:00</span>
+            </label>
+
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-19a" name="checkbox-19a" data-name="Checkbox 19a" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-19a">19:00 - 19:30</span>
+            </label>
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-19b" name="checkbox-19b" data-name="Checkbox 19b" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-19b">19:30 - 20:00</span>
+            </label>
+
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-20a" name="checkbox-20a" data-name="Checkbox 20a" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-20a">20:00 - 20:30</span>
+            </label>
+
+
+          </div>
+          <div>
+
+
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-20b" name="checkbox-20b" data-name="Checkbox 20b" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-20b">20:30 - 21:00</span>
+            </label>
+
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-21a" name="checkbox-21a" data-name="Checkbox 21a" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-21a">21:00 - 21:30</span>
+            </label>
+
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-21b" name="checkbox-21b" data-name="Checkbox 21b" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-21b">21:30 - 22:00</span>
+            </label>
+
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-22a" name="checkbox-22a" data-name="Checkbox 22a" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-22a">22:00 - 22:30</span>
+            </label>
+
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-22b" name="checkbox-22b" data-name="Checkbox 22b" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-22b">22:30 - 23:00</span>
+            </label>
+
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-23a" name="checkbox-23a" data-name="Checkbox 23a" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-23a">23:00 - 23:30</span>
+            </label>
+
+            <label class="w-checkbox">
+              <input type="checkbox" id="checkbox-23b" name="checkbox-23b" data-name="Checkbox 23b" class="w-checkbox-input" />
+              <span class="w-form-label" for="checkbox-23b">23:30 - 00:00</span>
+            </label>
+          </div>
+
         </div>
         <label for="name-2" class="field-label">Choose the Promotion</label>
         <div>
@@ -57,7 +237,7 @@
       </div>
     </div>
   </div>
-  <h1>Heading</h1>
+
 </div>
 <div class="navbar-no-shadow">
   <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar-no-shadow-container w-nav">
@@ -122,8 +302,6 @@
 <script>
   var urlBase = window.location.href.includes("localhost") ?"http://localhost:3000" :"https://bonap-api-d2a214f734f0.herokuapp.com";
 
-  var urlBase = window.location.href.includes("localhost") ?"http://localhost:3000" :"https://bonap-api-d2a214f734f0.herokuapp.com";
-
   function loadDiscountList() {
     fetch(urlBase + "/discounts", {
       method: 'GET',
@@ -161,6 +339,12 @@
   }
   window.onload = loadDiscountList;
 
+  var currentDate = new Date();
+  var maxDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, currentDate.getDate());
+  var formattedMaxDate = maxDate.toISOString().split('T')[0];
+  document.getElementById('field-2').max = formattedMaxDate;
+  var formattedMinDate = currentDate.toISOString().split('T')[0];
+  document.getElementById('field-2').min = formattedMinDate;
 
   const btn_logout = document.getElementById('logout-btn');
   btn_logout.addEventListener('click', () => {
