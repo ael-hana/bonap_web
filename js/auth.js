@@ -1,5 +1,5 @@
 function checkAuthentication() {
-    const urlBase = window.location.href.includes("localhost") ?"http://localhost:3000" :"https://bonap-api-d2a214f734f0.herokuapp.com";
+    const urlBase = window.location.href.includes("localhost") ?"http://localhost:3000" :"https://bonap-aa43479b1553.herokuapp.com";
 
     fetch(urlBase+'/restaurants/checktoken', {
         method: 'GET',
