@@ -18,7 +18,7 @@
 </head>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-      var urlLogin = window.location.href.includes("localhost") ?"http://localhost:3000/restaurants/login" :"https://bonap-aa43479b1553.herokuapp.com/restaurants/login"
+      var urlLogin = window.location.href.includes("localhost") ?"http://localhost:3000/restaurants/login" :"https://api.thebonap.com/restaurants/login"
     var formulaire = document.getElementById("login-form");
 
     formulaire.addEventListener("submit", function(e) {
@@ -43,7 +43,10 @@
         if (!response.ok) {
           throw new Error("La requête a échoué.");
         }
-        window.location.href = '/';
+        console.log('bravo')
+        console.log(response)
+        new Promise(res => setInterval(res, 5000)).then(() => window.location.href = '/')
+
       })
       .catch(function(error) {
         console.error(error);
