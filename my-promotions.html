@@ -451,6 +451,7 @@
           <table>
             <thead>
             <tr>
+              <th>Restaurant</th>
               <th>Date</th>
               <th>Hour</th>
               <th>People</th>
@@ -498,6 +499,9 @@
               listDiscounts.forEach(discount => {
                 const row = document.createElement('tr');
 
+                const colRestaurantName = document.createElement('td');
+                colRestaurantName.textContent = discount.restaurantName;
+
                 const colDate = document.createElement('td');
                 colDate.textContent = discount.date_slot;
 
@@ -511,6 +515,7 @@
                 colDiscount.textContent = `-${discount.discount_percentage} %`;
 
                 tableDiscounts.appendChild(row);
+                row.appendChild(colRestaurantName);
                 row.appendChild(colDate);
                 row.appendChild(colHours);
                 row.appendChild(colPeople);

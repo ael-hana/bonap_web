@@ -103,6 +103,7 @@
         <table>
           <thead>
           <tr>
+            <th>Restaurant</th>
             <th>Discount</th>
             <th>Day</th>
             <th>Reservation</th>
@@ -141,6 +142,9 @@
               listeReservations.forEach(reservation => {
                 const row = document.createElement('tr');
 
+                const colRestaurantName = document.createElement('td');
+                colRestaurantName.textContent = reservation.restaurantName;
+
                 const colDiscount = document.createElement('td');
                 const img = document.createElement('img');
                 img.setAttribute('src', reservation.discountOfDayImg);
@@ -160,6 +164,7 @@
                 colPeople.textContent = `${reservation.nb_people}`;
 
                 tableReservation.appendChild(row);
+                row.appendChild(colRestaurantName);
                 row.appendChild(colDiscount);
                 row.appendChild(colDay);
                 row.appendChild(colName);
