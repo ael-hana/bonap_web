@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  bonap_web:
+    image: nginx:latest
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/usr/share/nginx/html
+    restart: always

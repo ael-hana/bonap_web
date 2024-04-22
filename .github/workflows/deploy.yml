@@ -21,10 +21,10 @@ jobs:
         with:
           repository: ael-hana/bonap_web
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: 🚀 Run Docker Compose on Production
+      - name: 🚀 Run Docker Production
         if: ${{ github.ref == 'refs/heads/master' }}
         env:
           APP_ENV: ${{ secrets.APP_ENV }}
         run: |
-          docker run --rm -p 8000:80 $(pwd):/usr/share/nginx/html --name bonap-web nginx
+          docker-compose up -d
           docker system prune --all --volumes --force
