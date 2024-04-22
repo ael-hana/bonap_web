@@ -1,0 +1,31 @@
+name: 🚀 Deploy
+on:
+  push:
+    branches:
+      - main
+  pull_request: {}
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  deploy:
+    name: 🚀 Deploy
+    runs-on: [self-hosted]
+
+    if: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v4.1.1
+        with:
+          repository: ael-hana/bonap_web
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: 🚀 Run Docker Compose on Production
+        if: ${{ github.ref == 'refs/heads/main' }}
+        env:
+          APP_ENV: ${{ secrets.APP_ENV }}
+        run: |
+          docker build -t bonap-web .
+          docker run --rm -p 8000:80 -d bonap-web nginx
+          docker system prune --all --volumes --force
