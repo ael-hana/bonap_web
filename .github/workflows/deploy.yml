@@ -26,5 +26,5 @@ jobs:
         env:
           APP_ENV: ${{ secrets.APP_ENV }}
         run: |
-          docker run --rm -p 8000:80 --name bonap-web nginx
+          docker run --rm -p 8000:80 $(pwd):/usr/share/nginx/html --name bonap-web nginx
           docker system prune --all --volumes --force
