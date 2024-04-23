@@ -18,4 +18,8 @@ services:
       - N8N_PROTOCOL=https
       - NODE_ENV=production
     volumes:
-      - ${HOME}/n8n:/home/node/.n8n
+      - n8n_data:/home/node/.n8n
+
+volumes:
+  n8n_data:
+    external: true
