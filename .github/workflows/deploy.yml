@@ -26,5 +26,8 @@ jobs:
         env:
           APP_ENV: ${{ secrets.APP_ENV }}
         run: |
+          ls -la
+          pwd
+          echo $HOME
           docker-compose up -d
           docker system prune --all --volumes --force
