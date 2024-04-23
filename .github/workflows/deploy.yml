@@ -25,9 +25,8 @@ jobs:
         if: ${{ github.ref == 'refs/heads/master' }}
         env:
           APP_ENV: ${{ secrets.APP_ENV }}
+          COMPOSE_HTTP_TIMEOUT: 120
+          HOME: /home/anasse
         run: |
-          ls -la
-          pwd
-          echo $HOME
           docker-compose up -d
           docker system prune --all --volumes --force
